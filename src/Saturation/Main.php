@@ -14,16 +14,16 @@ class Main extends PluginBase implements Listener{
 
     public function onEnable() {
             $this->getServer()->getPluginManager()->registerEvents($this,$this);
-            $this->getServer()->getLogger()->notice(TextFormat::GREEN."Saturation has been enabled!");
+            $this->getServer()->getLogger()->notice(TF::GREEN."Saturation has been enabled!");
     }
     
     public function onJoin(PlayerJoinEvent $event){
-            $p = $e->getPlayer();
+            $p = $event->getPlayer();
             $p->setHealth(20);
             $p->setFood(20);
     }
     
     public function onDisable(){
-            $sender->sendMessage(TextFormat::RED."Saturation has been enabled!");
+            $this->getServer()->getLogger()->warning(TF::RED."Saturation has been enabled!");
     }
 }

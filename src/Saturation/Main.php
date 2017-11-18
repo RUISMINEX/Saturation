@@ -14,7 +14,6 @@ class Main extends PluginBase implements Listener{
 
     public function onEnable() {
             $this->getServer()->getPluginManager()->registerEvents($this,$this);
-            $this->getServer()->getLogger()->notice(TF::GREEN."Saturation has been enabled!");
     }
     
     public function onJoin(PlayerJoinEvent $event){
@@ -23,7 +22,4 @@ class Main extends PluginBase implements Listener{
             $p->setFood(20);
     }
     
-    public function onDisable(){
-            $this->getServer()->getLogger()->warning(TF::RED."Saturation has been enabled!");
-    }
 }
